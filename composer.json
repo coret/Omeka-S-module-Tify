@@ -1,0 +1,35 @@
+{
+    "name": "coret/omeka-s-module-tify",
+    "type": "omeka-s-module",
+    "description": "Module for Omeka S: displays IIIF manifests and images with the TIFY viewer.",
+    "keywords": [
+        "Omeka S",
+        "Omeka S module",
+        "IIIF",
+        "viewer",
+        "TIFY"
+    ],
+    "license": "AGPL-3.0-or-later",
+    "homepage": "https://github.com/coret/Omeka-S-module-Tify",
+    "authors": [
+        {
+            "name": "Bob Coret",
+            "homepage": "https://github.com/coret"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/coret/Omeka-S-module-Tify/issues",
+        "forum": "https://forum.omeka.org/"
+    },
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tify\\": "src/"
+        }
+    },
+    "extra": {
+        "installer-name": "Tify"
+    }
+}

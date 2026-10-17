@@ -1,0 +1,233 @@
+# English translation for the Omeka S module Tify.
+# Copyright (C) 2026 Bob Coret
+# This file is distributed under the same license as the Tify module.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tify 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/coret/Omeka-S-module-Tify/issues\n"
+"POT-Creation-Date: 2026-10-17 15:00+0200\n"
+"PO-Revision-Date: 2026-10-17 15:00+0200\n"
+"Last-Translator: Bob Coret\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: Module.php:197
+msgid "The height must be a CSS length such as \"640px\" or \"80vh\"."
+msgstr "The height must be a CSS length such as \"640px\" or \"80vh\"."
+
+#: Module.php:211
+msgid "The URL query key may only contain letters, digits, \"-\" and \"_\"."
+msgstr "The URL query key may only contain letters, digits, \"-\" and \"_\"."
+
+#: Module.php:225
+msgid "The additional TIFY options must be a JSON object, for example {\"pageLabelFormat\": \"P (L) / T\"}."
+msgstr "The additional TIFY options must be a JSON object, for example {\"pageLabelFormat\": \"P (L) / T\"}."
+
+#: Module.php:261 Module.php:261
+msgid "IIIF viewer"
+msgstr "IIIF viewer"
+
+#: src/Form/SettingsFieldset.php:29 src/Site/ResourcePageBlockLayout/Tify.php:16 src/Site/BlockLayout/Tify.php:27
+msgid "TIFY viewer"
+msgstr "TIFY viewer"
+
+#: src/Form/SettingsFieldset.php:38 src/Site/BlockLayout/Tify.php:74
+msgid "Height"
+msgstr "Height"
+
+#: src/Form/SettingsFieldset.php:39
+msgid "CSS height of the viewer, for example \"640px\", \"80vh\" or \"40em\". A number alone is read as pixels."
+msgstr "CSS height of the viewer, for example \"640px\", \"80vh\" or \"40em\". A number alone is read as pixels."
+
+#: src/Form/SettingsFieldset.php:51
+msgid "Color mode"
+msgstr "Color mode"
+
+#: src/Form/SettingsFieldset.php:52
+msgid "\"Automatic\" follows the color-scheme of the theme, \"System\" the preference of the browser."
+msgstr "\"Automatic\" follows the color-scheme of the theme, \"System\" the preference of the browser."
+
+#: src/Form/SettingsFieldset.php:55
+msgid "Automatic"
+msgstr "Automatic"
+
+#: src/Form/SettingsFieldset.php:56
+msgid "Light"
+msgstr "Light"
+
+#: src/Form/SettingsFieldset.php:57
+msgid "Dark"
+msgstr "Dark"
+
+#: src/Form/SettingsFieldset.php:58
+msgid "System"
+msgstr "System"
+
+#: src/Form/SettingsFieldset.php:70
+msgid "Panels"
+msgstr "Panels"
+
+#: src/Form/SettingsFieldset.php:71
+msgid "The panels next to the image, in this order, separated by commas. Available: text, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY."
+msgstr "The panels next to the image, in this order, separated by commas. Available: text, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY."
+
+#: src/Form/SettingsFieldset.php:83
+msgid "Panel opened at start"
+msgstr "Panel opened at start"
+
+#: src/Form/SettingsFieldset.php:84
+msgid "On wide screens the image is always visible next to the panel."
+msgstr "On wide screens the image is always visible next to the panel."
+
+#: src/Form/SettingsFieldset.php:85 src/Form/SettingsFieldset.php:149
+msgid "None: only the image"
+msgstr "None: only the image"
+
+#: src/Form/SettingsFieldset.php:97
+msgid "URL query key"
+msgstr "URL query key"
+
+#: src/Form/SettingsFieldset.php:98
+msgid "When set, for example to \"tify\", the page, zoom, pan, rotation and open panel are kept in the URL of the page, so a link opens the viewer in the same state. Only letters, digits, \"-\" and \"_\". Leave empty to disable."
+msgstr "When set, for example to \"tify\", the page, zoom, pan, rotation and open panel are kept in the URL of the page, so a link opens the viewer in the same state. Only letters, digits, \"-\" and \"_\". Leave empty to disable."
+
+#: src/Form/SettingsFieldset.php:111 src/Site/BlockLayout/Tify.php:81
+msgid "Additional TIFY options (JSON)"
+msgstr "Additional TIFY options (JSON)"
+
+#: src/Form/SettingsFieldset.php:112
+msgid "A JSON object with any TIFY option. It is merged over the settings above; each key replaces the whole value, nested objects are not merged."
+msgstr "A JSON object with any TIFY option. It is merged over the settings above; each key replaces the whole value, nested objects are not merged."
+
+#: src/Form/SettingsFieldset.php:136
+msgid "Show the viewer on the admin item page"
+msgstr "Show the viewer on the admin item page"
+
+#: src/Form/SettingsFieldset.php:137
+msgid "Adds a \"IIIF viewer\" tab to the item page in the admin."
+msgstr "Adds a \"IIIF viewer\" tab to the item page in the admin."
+
+#: src/Form/SettingsFieldset.php:151
+msgid "Full text"
+msgstr "Full text"
+
+#: src/Form/SettingsFieldset.php:152
+msgid "Pages"
+msgstr "Pages"
+
+#: src/Form/SettingsFieldset.php:153
+msgid "Contents"
+msgstr "Contents"
+
+#: src/Form/SettingsFieldset.php:154
+msgid "Info"
+msgstr "Info"
+
+#: src/Form/SettingsFieldset.php:155
+msgid "Export"
+msgstr "Export"
+
+#: src/Form/SettingsFieldset.php:156
+msgid "Collection"
+msgstr "Collection"
+
+#: src/Form/ConfigForm.php:21
+msgid "Property with the URL of an external IIIF manifest"
+msgstr "Property with the URL of an external IIIF manifest"
+
+#: src/Form/ConfigForm.php:22
+msgid "When a resource has a URL in this property, the viewer shows that manifest. Otherwise it shows the manifest built by the module IIIF Server, when installed. Usually \"dcterms:hasFormat\" or \"dcterms:isFormatOf\". This setting is shared with the modules IIIF Server and Universal Viewer."
+msgstr "When a resource has a URL in this property, the viewer shows that manifest. Otherwise it shows the manifest built by the module IIIF Server, when installed. Usually \"dcterms:hasFormat\" or \"dcterms:isFormatOf\". This setting is shared with the modules IIIF Server and Universal Viewer."
+
+#: src/Form/ConfigForm.php:29
+msgid "Select a property…"
+msgstr "Select a property…"
+
+#: src/Form/SiteSettingsFieldset.php:14
+msgid "Use the main setting"
+msgstr "Use the main setting"
+
+#: src/Form/SiteSettingsFieldset.php:19
+msgid "CSS height of the viewer, for example \"640px\" or \"80vh\". Leave empty to use the main setting."
+msgstr "CSS height of the viewer, for example \"640px\" or \"80vh\". Leave empty to use the main setting."
+
+#: src/Form/SiteSettingsFieldset.php:20
+msgid "The panels next to the image, in this order, separated by commas: text, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
+msgstr "The panels next to the image, in this order, separated by commas: text, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
+
+#: src/Form/SiteSettingsFieldset.php:21
+msgid "Keeps the state of the viewer in the URL of the page under this key. Leave empty to use the main setting."
+msgstr "Keeps the state of the viewer in the URL of the page under this key. Leave empty to use the main setting."
+
+#: src/Form/SiteSettingsFieldset.php:22
+msgid "A JSON object with any TIFY option, merged over the main JSON options. Use {\"urlQueryKey\": null} to switch off a URL query key set in the main settings."
+msgstr "A JSON object with any TIFY option, merged over the main JSON options. Use {\"urlQueryKey\": null} to switch off a URL query key set in the main settings."
+
+#: src/Form/SiteSettingsFieldset.php:36
+msgid "Show the viewer automatically (themes without resource page blocks)"
+msgstr "Show the viewer automatically (themes without resource page blocks)"
+
+#: src/Form/SiteSettingsFieldset.php:37
+msgid "Only for older themes. With a theme that has configurable resource page blocks, add the \"TIFY viewer\" block in the theme settings instead. The browse pages require the module IIIF Server."
+msgstr "Only for older themes. With a theme that has configurable resource page blocks, add the \"TIFY viewer\" block in the theme settings instead. The browse pages require the module IIIF Server."
+
+#: src/Form/SiteSettingsFieldset.php:39
+msgid "Item page"
+msgstr "Item page"
+
+#: src/Form/SiteSettingsFieldset.php:40
+msgid "Item browse page"
+msgstr "Item browse page"
+
+#: src/Form/SiteSettingsFieldset.php:41
+msgid "Item set browse page"
+msgstr "Item set browse page"
+
+#: src/Site/BlockLayout/Tify.php:39
+msgid "The manifest URL of the TIFY block is not a valid http(s) URL."
+msgstr "The manifest URL of the TIFY block is not a valid http(s) URL."
+
+#: src/Site/BlockLayout/Tify.php:44
+msgid "The height of the TIFY block must be a CSS length such as \"640px\" or \"80vh\"."
+msgstr "The height of the TIFY block must be a CSS length such as \"640px\" or \"80vh\"."
+
+#: src/Site/BlockLayout/Tify.php:51
+msgid "The TIFY options of the block must be a JSON object."
+msgstr "The TIFY options of the block must be a JSON object."
+
+#: src/Site/BlockLayout/Tify.php:66
+msgid "IIIF manifest URL"
+msgstr "IIIF manifest URL"
+
+#: src/Site/BlockLayout/Tify.php:67
+msgid "Shows this manifest or collection instead of the attachments below."
+msgstr "Shows this manifest or collection instead of the attachments below."
+
+#: src/Site/BlockLayout/Tify.php:75
+msgid "CSS height, for example \"640px\" or \"80vh\". Leave empty to use the site setting."
+msgstr "CSS height, for example \"640px\" or \"80vh\". Leave empty to use the site setting."
+
+#: src/Site/BlockLayout/Tify.php:82
+msgid "Merged over the settings, for example {\"pages\": [3], \"view\": \"info\"}."
+msgstr "Merged over the settings, for example {\"pages\": [3], \"view\": \"info\"}."
+
+#: src/Site/BlockLayout/Tify.php:88
+msgid "Options"
+msgstr "Options"
+
+#: view/common/tify.phtml:20
+msgid "IIIF manifest"
+msgstr "IIIF manifest"
+
+#: config/module.ini:4
+msgid "Tify"
+msgstr "Tify"
+
+#: config/module.ini:5
+msgid "Displays IIIF manifests and images with the TIFY viewer: as a resource page block, a site page block, on the admin item page, and below items in themes without resource page blocks."
+msgstr "Displays IIIF manifests and images with the TIFY viewer: as a resource page block, a site page block, on the admin item page, and below items in themes without resource page blocks."

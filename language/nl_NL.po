@@ -1,0 +1,233 @@
+# Dutch translation for the Omeka S module Tify.
+# Copyright (C) 2026 Bob Coret
+# This file is distributed under the same license as the Tify module.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tify 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/coret/Omeka-S-module-Tify/issues\n"
+"POT-Creation-Date: 2026-10-17 15:00+0200\n"
+"PO-Revision-Date: 2026-10-17 15:00+0200\n"
+"Last-Translator: Bob Coret\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: Module.php:197
+msgid "The height must be a CSS length such as \"640px\" or \"80vh\"."
+msgstr "De hoogte moet een CSS-lengte zijn, zoals \"640px\" of \"80vh\"."
+
+#: Module.php:211
+msgid "The URL query key may only contain letters, digits, \"-\" and \"_\"."
+msgstr "De URL-querysleutel mag alleen letters, cijfers, \"-\" en \"_\" bevatten."
+
+#: Module.php:225
+msgid "The additional TIFY options must be a JSON object, for example {\"pageLabelFormat\": \"P (L) / T\"}."
+msgstr "De aanvullende TIFY-opties moeten een JSON-object zijn, bijvoorbeeld {\"pageLabelFormat\": \"P (L) / T\"}."
+
+#: Module.php:261 Module.php:261
+msgid "IIIF viewer"
+msgstr "IIIF-viewer"
+
+#: src/Form/SettingsFieldset.php:29 src/Site/ResourcePageBlockLayout/Tify.php:16 src/Site/BlockLayout/Tify.php:27
+msgid "TIFY viewer"
+msgstr "TIFY-viewer"
+
+#: src/Form/SettingsFieldset.php:38 src/Site/BlockLayout/Tify.php:74
+msgid "Height"
+msgstr "Hoogte"
+
+#: src/Form/SettingsFieldset.php:39
+msgid "CSS height of the viewer, for example \"640px\", \"80vh\" or \"40em\". A number alone is read as pixels."
+msgstr "CSS-hoogte van de viewer, bijvoorbeeld \"640px\", \"80vh\" of \"40em\". Een los getal geldt als pixels."
+
+#: src/Form/SettingsFieldset.php:51
+msgid "Color mode"
+msgstr "Kleurmodus"
+
+#: src/Form/SettingsFieldset.php:52
+msgid "\"Automatic\" follows the color-scheme of the theme, \"System\" the preference of the browser."
+msgstr "\"Automatisch\" volgt het kleurenschema (color-scheme) van het thema, \"Systeem\" de voorkeur van de browser."
+
+#: src/Form/SettingsFieldset.php:55
+msgid "Automatic"
+msgstr "Automatisch"
+
+#: src/Form/SettingsFieldset.php:56
+msgid "Light"
+msgstr "Licht"
+
+#: src/Form/SettingsFieldset.php:57
+msgid "Dark"
+msgstr "Donker"
+
+#: src/Form/SettingsFieldset.php:58
+msgid "System"
+msgstr "Systeem"
+
+#: src/Form/SettingsFieldset.php:70
+msgid "Panels"
+msgstr "Panelen"
+
+#: src/Form/SettingsFieldset.php:71
+msgid "The panels next to the image, in this order, separated by commas. Available: text, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY."
+msgstr "De panelen naast de afbeelding, in deze volgorde, gescheiden door komma's. Beschikbaar: text, thumbnails, toc, info, export, collection. Panelen waarvoor het manifest geen inhoud heeft, laat TIFY weg."
+
+#: src/Form/SettingsFieldset.php:83
+msgid "Panel opened at start"
+msgstr "Paneel dat bij het openen getoond wordt"
+
+#: src/Form/SettingsFieldset.php:84
+msgid "On wide screens the image is always visible next to the panel."
+msgstr "Op brede schermen is de afbeelding altijd naast het paneel zichtbaar."
+
+#: src/Form/SettingsFieldset.php:85 src/Form/SettingsFieldset.php:149
+msgid "None: only the image"
+msgstr "Geen: alleen de afbeelding"
+
+#: src/Form/SettingsFieldset.php:97
+msgid "URL query key"
+msgstr "URL-querysleutel"
+
+#: src/Form/SettingsFieldset.php:98
+msgid "When set, for example to \"tify\", the page, zoom, pan, rotation and open panel are kept in the URL of the page, so a link opens the viewer in the same state. Only letters, digits, \"-\" and \"_\". Leave empty to disable."
+msgstr "Indien ingesteld, bijvoorbeeld op \"tify\", worden pagina, zoom, positie, rotatie en het open paneel in de URL van de pagina bewaard, zodat een link de viewer in dezelfde toestand opent. Alleen letters, cijfers, \"-\" en \"_\". Leeg laten om uit te schakelen."
+
+#: src/Form/SettingsFieldset.php:111 src/Site/BlockLayout/Tify.php:81
+msgid "Additional TIFY options (JSON)"
+msgstr "Aanvullende TIFY-opties (JSON)"
+
+#: src/Form/SettingsFieldset.php:112
+msgid "A JSON object with any TIFY option. It is merged over the settings above; each key replaces the whole value, nested objects are not merged."
+msgstr "Een JSON-object met willekeurige TIFY-opties. Het wordt over de instellingen hierboven heen gelegd; elke sleutel vervangt de hele waarde, geneste objecten worden niet samengevoegd."
+
+#: src/Form/SettingsFieldset.php:136
+msgid "Show the viewer on the admin item page"
+msgstr "Toon de viewer op de itempagina in de beheeromgeving"
+
+#: src/Form/SettingsFieldset.php:137
+msgid "Adds a \"IIIF viewer\" tab to the item page in the admin."
+msgstr "Voegt een tabblad \"IIIF-viewer\" toe aan de itempagina in de beheeromgeving."
+
+#: src/Form/SettingsFieldset.php:151
+msgid "Full text"
+msgstr "Volledige tekst"
+
+#: src/Form/SettingsFieldset.php:152
+msgid "Pages"
+msgstr "Pagina's"
+
+#: src/Form/SettingsFieldset.php:153
+msgid "Contents"
+msgstr "Inhoud"
+
+#: src/Form/SettingsFieldset.php:154
+msgid "Info"
+msgstr "Info"
+
+#: src/Form/SettingsFieldset.php:155
+msgid "Export"
+msgstr "Export"
+
+#: src/Form/SettingsFieldset.php:156
+msgid "Collection"
+msgstr "Collectie"
+
+#: src/Form/ConfigForm.php:21
+msgid "Property with the URL of an external IIIF manifest"
+msgstr "Eigenschap met de URL van een extern IIIF-manifest"
+
+#: src/Form/ConfigForm.php:22
+msgid "When a resource has a URL in this property, the viewer shows that manifest. Otherwise it shows the manifest built by the module IIIF Server, when installed. Usually \"dcterms:hasFormat\" or \"dcterms:isFormatOf\". This setting is shared with the modules IIIF Server and Universal Viewer."
+msgstr "Als een resource een URL in deze eigenschap heeft, toont de viewer dat manifest. Anders toont hij het manifest dat de module IIIF Server maakt, als die geïnstalleerd is. Meestal \"dcterms:hasFormat\" of \"dcterms:isFormatOf\". Deze instelling wordt gedeeld met de modules IIIF Server en Universal Viewer."
+
+#: src/Form/ConfigForm.php:29
+msgid "Select a property…"
+msgstr "Kies een eigenschap…"
+
+#: src/Form/SiteSettingsFieldset.php:14
+msgid "Use the main setting"
+msgstr "Gebruik de hoofdinstelling"
+
+#: src/Form/SiteSettingsFieldset.php:19
+msgid "CSS height of the viewer, for example \"640px\" or \"80vh\". Leave empty to use the main setting."
+msgstr "CSS-hoogte van de viewer, bijvoorbeeld \"640px\" of \"80vh\". Leeg laten om de hoofdinstelling te gebruiken."
+
+#: src/Form/SiteSettingsFieldset.php:20
+msgid "The panels next to the image, in this order, separated by commas: text, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
+msgstr "De panelen naast de afbeelding, in deze volgorde, gescheiden door komma's: text, thumbnails, toc, info, export, collection. Leeg laten om de hoofdinstelling te gebruiken."
+
+#: src/Form/SiteSettingsFieldset.php:21
+msgid "Keeps the state of the viewer in the URL of the page under this key. Leave empty to use the main setting."
+msgstr "Bewaart de toestand van de viewer onder deze sleutel in de URL van de pagina. Leeg laten om de hoofdinstelling te gebruiken."
+
+#: src/Form/SiteSettingsFieldset.php:22
+msgid "A JSON object with any TIFY option, merged over the main JSON options. Use {\"urlQueryKey\": null} to switch off a URL query key set in the main settings."
+msgstr "Een JSON-object met willekeurige TIFY-opties, over de JSON-opties van de hoofdinstellingen heen gelegd. Gebruik {\"urlQueryKey\": null} om een URL-querysleutel uit de hoofdinstellingen uit te schakelen."
+
+#: src/Form/SiteSettingsFieldset.php:36
+msgid "Show the viewer automatically (themes without resource page blocks)"
+msgstr "Toon de viewer automatisch (thema's zonder resource-paginablokken)"
+
+#: src/Form/SiteSettingsFieldset.php:37
+msgid "Only for older themes. With a theme that has configurable resource page blocks, add the \"TIFY viewer\" block in the theme settings instead. The browse pages require the module IIIF Server."
+msgstr "Alleen voor oudere thema's. Bij een thema met configureerbare resource-paginablokken voeg je in plaats daarvan het blok \"TIFY-viewer\" toe in de thema-instellingen. De bladerpagina's vereisen de module IIIF Server."
+
+#: src/Form/SiteSettingsFieldset.php:39
+msgid "Item page"
+msgstr "Itempagina"
+
+#: src/Form/SiteSettingsFieldset.php:40
+msgid "Item browse page"
+msgstr "Bladerpagina items"
+
+#: src/Form/SiteSettingsFieldset.php:41
+msgid "Item set browse page"
+msgstr "Bladerpagina itemsets"
+
+#: src/Site/BlockLayout/Tify.php:39
+msgid "The manifest URL of the TIFY block is not a valid http(s) URL."
+msgstr "De manifest-URL van het TIFY-blok is geen geldige http(s)-URL."
+
+#: src/Site/BlockLayout/Tify.php:44
+msgid "The height of the TIFY block must be a CSS length such as \"640px\" or \"80vh\"."
+msgstr "De hoogte van het TIFY-blok moet een CSS-lengte zijn, zoals \"640px\" of \"80vh\"."
+
+#: src/Site/BlockLayout/Tify.php:51
+msgid "The TIFY options of the block must be a JSON object."
+msgstr "De TIFY-opties van het blok moeten een JSON-object zijn."
+
+#: src/Site/BlockLayout/Tify.php:66
+msgid "IIIF manifest URL"
+msgstr "URL van het IIIF-manifest"
+
+#: src/Site/BlockLayout/Tify.php:67
+msgid "Shows this manifest or collection instead of the attachments below."
+msgstr "Toont dit manifest of deze collectie in plaats van de bijlagen hieronder."
+
+#: src/Site/BlockLayout/Tify.php:75
+msgid "CSS height, for example \"640px\" or \"80vh\". Leave empty to use the site setting."
+msgstr "CSS-hoogte, bijvoorbeeld \"640px\" of \"80vh\". Leeg laten om de site-instelling te gebruiken."
+
+#: src/Site/BlockLayout/Tify.php:82
+msgid "Merged over the settings, for example {\"pages\": [3], \"view\": \"info\"}."
+msgstr "Wordt over de instellingen heen gelegd, bijvoorbeeld {\"pages\": [3], \"view\": \"info\"}."
+
+#: src/Site/BlockLayout/Tify.php:88
+msgid "Options"
+msgstr "Opties"
+
+#: view/common/tify.phtml:20
+msgid "IIIF manifest"
+msgstr "IIIF-manifest"
+
+#: config/module.ini:4
+msgid "Tify"
+msgstr "Tify"
+
+#: config/module.ini:5
+msgid "Displays IIIF manifests and images with the TIFY viewer: as a resource page block, a site page block, on the admin item page, and below items in themes without resource page blocks."
+msgstr "Toont IIIF-manifesten en -afbeeldingen met de TIFY-viewer: als resource-paginablok, als sitepaginablok, op de itempagina in de beheeromgeving en onder items in thema's zonder resource-paginablokken."

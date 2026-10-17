@@ -1,0 +1,15 @@
+/* Layout of the TIFY container in Omeka pages. TIFY styles its own interior. */
+
+.tify-viewer {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 320px;
+    margin: 0 0 1.5em;
+    overflow: hidden;
+}
+
+/* The admin item page puts the viewer in its own section. */
+#tify-section .tify-viewer {
+    margin-top: 1em;
+}

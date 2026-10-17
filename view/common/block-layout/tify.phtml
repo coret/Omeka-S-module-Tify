@@ -1,0 +1,11 @@
+<?php
+/**
+ * Site page block "TIFY viewer".
+ *
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var \Omeka\Api\Representation\SitePageBlockRepresentation $block
+ * @var string|\Omeka\Api\Representation\AbstractResourceEntityRepresentation|array $resource
+ *   A manifest URL, one resource, or several resources
+ * @var array $options Options of the tify() view helper
+ */
+echo $this->tify($resource, $options);

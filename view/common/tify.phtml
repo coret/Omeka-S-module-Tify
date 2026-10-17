@@ -1,0 +1,22 @@
+<?php
+/**
+ * One TIFY viewer. asset/js/tify.js mounts it once it scrolls into view.
+ *
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var string $id
+ * @var string $height CSS height, already validated
+ * @var string $class
+ * @var array $options TIFY options
+ * @var string $manifestUrl
+ */
+$escapeAttr = $this->plugin('escapeHtmlAttr');
+$json = json_encode($options, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+?>
+<div class="tify-viewer<?= $class ? ' ' . $escapeAttr($class) : '' ?>"
+    id="<?= $escapeAttr($id) ?>"
+    style="height: <?= $escapeAttr($height) ?>;"
+    data-tify-options="<?= $escapeAttr($json) ?>">
+    <noscript>
+        <a href="<?= $escapeAttr($manifestUrl) ?>"><?= $this->escapeHtml($this->translate('IIIF manifest')) ?></a>
+    </noscript>
+</div>
