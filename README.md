@@ -255,6 +255,18 @@ viewer element needs the class `tify-viewer` and the attribute
   page cost nothing until scrolled to, and the viewer in the admin tab starts
   when the tab is opened (a hidden container has no size, which would leave
   OpenSeadragon with an empty canvas).
+- **TIFY is shielded from theme styles.** TIFY renders real `<header>`,
+  `<footer>` and `<h1>` elements. Themes that style those globally for their
+  own page header (`header { position: fixed; top: 0 }`, clearfix
+  pseudo-elements, a fixed title width) would pull TIFY's toolbar to the top of
+  the window. `asset/css/tify.css` resets exactly the properties TIFY leaves to
+  the browser, with two-class selectors that beat element rules without
+  overriding TIFY's own.
+- **Assets are versioned by their file.** The asset URLs carry a hash of the
+  file's time and size instead of the module version, so a stylesheet fix or a
+  new TIFY build reaches browsers even when the site serves assets with an
+  immutable cache, without a module version bump (which Omeka treats as an
+  upgrade to run in the admin).
 - **No dependency on other modules.** Unlike Universal Viewer, the module does
   not require the module Common. IIIF Server is optional and detected at
   runtime through its `iiifUrl` view helper.
@@ -279,9 +291,8 @@ data/scripts/update-tify.sh 0.36.2    # a given release
 
 The script downloads `tify.js`, `tify.css`, the translations and TIFY's
 license from jsDelivr into `asset/vendor/tify/` and writes the version to
-`asset/vendor/tify/VERSION`. Bump the module version in `config/module.ini`
-afterwards: asset URLs carry the module version, which is what makes browsers
-fetch the new build. Then run the tests and check the [TIFY releases] for
+`asset/vendor/tify/VERSION`. Asset URLs are versioned by file, so browsers
+fetch the new build without a module version bump. Then run the tests and check the [TIFY releases] for
 changed options.
 
 ## Development

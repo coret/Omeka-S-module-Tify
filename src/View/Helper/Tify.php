@@ -314,12 +314,26 @@ class Tify extends AbstractHelper
     protected function appendAssets(): void
     {
         $view = $this->getView();
-        $assetUrl = $view->plugin('assetUrl');
         $view->headLink()
-            ->appendStylesheet($assetUrl('vendor/tify/tify.css', 'Tify'))
-            ->appendStylesheet($assetUrl('css/tify.css', 'Tify'));
+            ->appendStylesheet($this->assetUrl('vendor/tify/tify.css'))
+            ->appendStylesheet($this->assetUrl('css/tify.css'));
         $view->headScript()
-            ->appendFile($assetUrl('vendor/tify/tify.js', 'Tify'), 'module')
-            ->appendFile($assetUrl('js/tify.js', 'Tify'), 'module');
+            ->appendFile($this->assetUrl('vendor/tify/tify.js'), 'module')
+            ->appendFile($this->assetUrl('js/tify.js'), 'module');
+    }
+
+    /**
+     * The URL of a module asset, versioned by the file itself rather than by
+     * the module version: sites often serve assets with long or immutable
+     * cache lifetimes, and a fix to the stylesheet or a new TIFY build must
+     * reach browsers without bumping the module version (which Omeka would
+     * treat as an upgrade to run in the admin).
+     */
+    public function assetUrl(string $file): string
+    {
+        $url = $this->getView()->assetUrl($file, 'Tify', false, false);
+        $path = dirname(__DIR__, 3) . '/asset/' . $file;
+        $version = is_file($path) ? substr(md5(filemtime($path) . ':' . filesize($path)), 0, 8) : '';
+        return $version === '' ? $url : $url . '?v=' . $version;
     }
 }

@@ -13,3 +13,87 @@
 #tify-section .tify-viewer {
     margin-top: 1em;
 }
+
+/*
+ * Shield TIFY from theme rules on bare elements.
+ *
+ * TIFY renders real <header>, <footer>, <h1> and lists, and only styles the
+ * properties it needs. Themes often style those elements globally for their
+ * own page header and footer, for example "header { position: fixed; top: 0 }"
+ * or "footer { position: absolute; bottom: 0 }", which would pull TIFY's
+ * toolbar to the top of the window and its help footer out of the panel.
+ *
+ * Each rule below restores what TIFY's own stylesheet leaves to the browser
+ * default; where TIFY does set a property, its own value is repeated. Two
+ * classes are enough to win over element selectors without fighting the
+ * single-class rules of TIFY.
+ */
+
+.tify-viewer .tify-header {
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+    box-shadow: none;
+    float: none;
+}
+
+.tify-viewer .tify-header-column {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+/*
+ * Clearfix pseudo-elements ("header > *::before { content: '' }") become flex
+ * items in TIFY's header columns and push the title towards the middle. TIFY
+ * itself uses no pseudo-elements on the header or its columns.
+ */
+.tify-viewer .tify-header::before,
+.tify-viewer .tify-header::after,
+.tify-viewer .tify-header-column::before,
+.tify-viewer .tify-header-column::after {
+    content: none;
+}
+
+.tify-viewer .tify-header-title {
+    float: none;
+    width: auto;
+    padding: 0;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.tify-viewer .tify-help-footer {
+    position: static;
+    top: auto;
+    bottom: auto;
+    width: auto;
+    height: auto;
+    max-width: none;
+    clear: none;
+    border: 0;
+    background: none;
+    color: inherit;
+    text-align: inherit;
+    padding: calc(var(--tify-grid-base, 1.5em) * .75) 0 0;
+}
+
+.tify-viewer .tify-list,
+.tify-viewer .tify-export-list {
+    padding: 0;
+}
+
+.tify-viewer .tify-page-select-input {
+    min-height: 0;
+    margin: 0;
+}

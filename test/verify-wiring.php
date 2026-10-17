@@ -390,8 +390,9 @@ $v->check('no URL query key unless configured', !array_key_exists('urlQueryKey',
 $v->check('the default views are passed in order', ['text', 'thumbnails', 'toc', 'info', 'export', 'collection'] === ($options['views'] ?? null));
 
 $head = html_entity_decode((string) $view->headScript(), ENT_QUOTES | ENT_HTML5);
-$v->check('TIFY is loaded as an ES module', (bool) preg_match('~<script type="module" src="/modules/Tify/asset/vendor/tify/tify.js\?v=[^"]+"~', $head), trim($head));
+$v->check('TIFY is loaded as an ES module', (bool) preg_match('~<script type="module" src="/modules/Tify/asset/vendor/tify/tify.js\?v=[0-9a-f]{8}"~', $head), trim($head));
 $v->check('the starter script follows it', strpos($head, 'vendor/tify/tify.js') < strpos($head, 'asset/js/tify.js'));
+$v->check('assets are versioned by their file, not by the module version', false === strpos($head . (string) $view->headLink(), '?v=0.1.0'));
 $v->check('the stylesheets are added', 2 === substr_count((string) $view->headLink(), 'stylesheet'));
 
 $siteSettings->set('tify_height', '75vh');
