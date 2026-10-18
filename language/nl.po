@@ -73,8 +73,8 @@ msgid "Panels"
 msgstr "Panelen"
 
 #: src/Form/SettingsFieldset.php:71
-msgid "The panels next to the image, in this order, separated by commas. Available: text, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY."
-msgstr "De panelen naast de afbeelding, in deze volgorde, gescheiden door komma's. Beschikbaar: text, thumbnails, toc, info, export, collection. Panelen waarvoor het manifest geen inhoud heeft, laat TIFY weg."
+msgid "The panels next to the image, in this order, separated by commas. Available: text, search, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY. \"search\" needs a TIFY build with a search view."
+msgstr "De panelen naast de afbeelding, in deze volgorde, gescheiden door komma's. Beschikbaar: text, search, thumbnails, toc, info, export, collection. Panelen waarvoor het manifest geen inhoud heeft, laat TIFY weg. \"search\" vereist een TIFY-versie met een zoekpaneel."
 
 #: src/Form/SettingsFieldset.php:83
 msgid "Panel opened at start"
@@ -117,6 +117,10 @@ msgid "Full text"
 msgstr "Volledige tekst"
 
 #: src/Form/SettingsFieldset.php:152
+msgid "Search"
+msgstr "Zoeken"
+
+#: src/Form/SettingsFieldset.php:152
 msgid "Pages"
 msgstr "Pagina's"
 
@@ -157,8 +161,8 @@ msgid "CSS height of the viewer, for example \"640px\" or \"80vh\". Leave empty 
 msgstr "CSS-hoogte van de viewer, bijvoorbeeld \"640px\" of \"80vh\". Leeg laten om de hoofdinstelling te gebruiken."
 
 #: src/Form/SiteSettingsFieldset.php:20
-msgid "The panels next to the image, in this order, separated by commas: text, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
-msgstr "De panelen naast de afbeelding, in deze volgorde, gescheiden door komma's: text, thumbnails, toc, info, export, collection. Leeg laten om de hoofdinstelling te gebruiken."
+msgid "The panels next to the image, in this order, separated by commas: text, search, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
+msgstr "De panelen naast de afbeelding, in deze volgorde, gescheiden door komma's: text, search, thumbnails, toc, info, export, collection. Leeg laten om de hoofdinstelling te gebruiken."
 
 #: src/Form/SiteSettingsFieldset.php:21
 msgid "Keeps the state of the viewer in the URL of the page under this key. Leave empty to use the main setting."

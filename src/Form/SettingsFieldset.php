@@ -68,7 +68,7 @@ class SettingsFieldset extends Fieldset
                 'options' => [
                     'element_group' => self::ELEMENT_GROUP,
                     'label' => 'Panels', // @translate
-                    'info' => 'The panels next to the image, in this order, separated by commas. Available: text, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY.', // @translate
+                    'info' => 'The panels next to the image, in this order, separated by commas. Available: text, search, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY. "search" needs a TIFY build with a search view.', // @translate
                 ],
                 'attributes' => [
                     'id' => 'tify_views',
@@ -149,6 +149,7 @@ class SettingsFieldset extends Fieldset
         $none = $this->inheritLabel === null ? [] : ['none' => 'None: only the image']; // @translate
         return $none + [
             'text' => 'Full text', // @translate
+            'search' => 'Search', // @translate
             'thumbnails' => 'Pages', // @translate
             'toc' => 'Contents', // @translate
             'info' => 'Info', // @translate

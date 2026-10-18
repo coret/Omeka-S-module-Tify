@@ -17,7 +17,7 @@ class SiteSettingsFieldset extends SettingsFieldset
         // Full sentences rather than appended fragments, so they translate.
         $infos = [
             'tify_height' => 'CSS height of the viewer, for example "640px" or "80vh". Leave empty to use the main setting.', // @translate
-            'tify_views' => 'The panels next to the image, in this order, separated by commas: text, thumbnails, toc, info, export, collection. Leave empty to use the main setting.', // @translate
+            'tify_views' => 'The panels next to the image, in this order, separated by commas: text, search, thumbnails, toc, info, export, collection. Leave empty to use the main setting.', // @translate
             'tify_url_query_key' => 'Keeps the state of the viewer in the URL of the page under this key. Leave empty to use the main setting.', // @translate
             'tify_config' => 'A JSON object with any TIFY option, merged over the main JSON options. Use {"urlQueryKey": null} to switch off a URL query key set in the main settings.', // @translate
         ];

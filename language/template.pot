@@ -73,7 +73,7 @@ msgid "Panels"
 msgstr ""
 
 #: src/Form/SettingsFieldset.php:71
-msgid "The panels next to the image, in this order, separated by commas. Available: text, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY."
+msgid "The panels next to the image, in this order, separated by commas. Available: text, search, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY. \"search\" needs a TIFY build with a search view."
 msgstr ""
 
 #: src/Form/SettingsFieldset.php:83
@@ -117,6 +117,10 @@ msgid "Full text"
 msgstr ""
 
 #: src/Form/SettingsFieldset.php:152
+msgid "Search"
+msgstr ""
+
+#: src/Form/SettingsFieldset.php:152
 msgid "Pages"
 msgstr ""
 
@@ -157,7 +161,7 @@ msgid "CSS height of the viewer, for example \"640px\" or \"80vh\". Leave empty 
 msgstr ""
 
 #: src/Form/SiteSettingsFieldset.php:20
-msgid "The panels next to the image, in this order, separated by commas: text, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
+msgid "The panels next to the image, in this order, separated by commas: text, search, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
 msgstr ""
 
 #: src/Form/SiteSettingsFieldset.php:21

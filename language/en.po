@@ -73,8 +73,8 @@ msgid "Panels"
 msgstr "Panels"
 
 #: src/Form/SettingsFieldset.php:71
-msgid "The panels next to the image, in this order, separated by commas. Available: text, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY."
-msgstr "The panels next to the image, in this order, separated by commas. Available: text, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY."
+msgid "The panels next to the image, in this order, separated by commas. Available: text, search, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY. \"search\" needs a TIFY build with a search view."
+msgstr "The panels next to the image, in this order, separated by commas. Available: text, search, thumbnails, toc, info, export, collection. Panels the manifest has no content for are left out by TIFY. \"search\" needs a TIFY build with a search view."
 
 #: src/Form/SettingsFieldset.php:83
 msgid "Panel opened at start"
@@ -117,6 +117,10 @@ msgid "Full text"
 msgstr "Full text"
 
 #: src/Form/SettingsFieldset.php:152
+msgid "Search"
+msgstr "Search"
+
+#: src/Form/SettingsFieldset.php:152
 msgid "Pages"
 msgstr "Pages"
 
@@ -157,8 +161,8 @@ msgid "CSS height of the viewer, for example \"640px\" or \"80vh\". Leave empty 
 msgstr "CSS height of the viewer, for example \"640px\" or \"80vh\". Leave empty to use the main setting."
 
 #: src/Form/SiteSettingsFieldset.php:20
-msgid "The panels next to the image, in this order, separated by commas: text, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
-msgstr "The panels next to the image, in this order, separated by commas: text, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
+msgid "The panels next to the image, in this order, separated by commas: text, search, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
+msgstr "The panels next to the image, in this order, separated by commas: text, search, thumbnails, toc, info, export, collection. Leave empty to use the main setting."
 
 #: src/Form/SiteSettingsFieldset.php:21
 msgid "Keeps the state of the viewer in the URL of the page under this key. Leave empty to use the main setting."

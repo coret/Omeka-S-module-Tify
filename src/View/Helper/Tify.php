@@ -30,9 +30,10 @@ class Tify extends AbstractHelper
 {
     /**
      * The views (panels) TIFY knows, in its default order. The media view is
-     * always present and cannot be configured.
+     * always present and cannot be configured. The search view needs a TIFY
+     * build with a search view (IIIF Content Search), so it is not a default.
      */
-    const VIEWS = ['text', 'thumbnails', 'toc', 'info', 'export', 'collection'];
+    const VIEWS = ['text', 'search', 'thumbnails', 'toc', 'info', 'export', 'collection'];
 
     const COLOR_MODES = ['auto', 'light', 'dark', 'system'];
 

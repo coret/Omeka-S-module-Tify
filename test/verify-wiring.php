@@ -408,6 +408,7 @@ $options = optionsOf($html);
 $v->check('a site height replaces the main one', false !== strpos($html, 'height: 75vh;'));
 $v->check('a site color mode replaces the main one', 'dark' === $options['colorMode']);
 $v->check('the panel list keeps its order, without unknown or repeated names', ['info', 'thumbnails'] === $options['views'], json_encode($options['views']));
+$v->check('the search panel is accepted', ['search', 'text'] === $view->plugin('tify')->parseViews('search, text'));
 $v->check('the start panel is passed', 'info' === $options['view']);
 $v->check('the main JSON config is applied', 'P / T' === ($options['pageLabelFormat'] ?? null));
 $v->check('the site JSON config wins over the main one', 3 === ($options['zoom'] ?? null));
