@@ -22,6 +22,7 @@
 // ---------------------------------------------------------------- locating Omeka
 
 $modulePath = dirname(__DIR__);
+$moduleVersion = parse_ini_file($modulePath . '/config/module.ini')['version'] ?? '';
 $omekaPath = getenv('OMEKA_PATH') ?: null;
 if (!$omekaPath) {
     $candidate = dirname($modulePath, 2);
@@ -265,8 +266,10 @@ function makeView(FakeSettings $settings, FakeSettings $siteSettings, FakeStatus
     $helpers->setService('translate', function ($text) {
         return $text;
     });
-    $helpers->setService('assetUrl', function ($file, $module = null, $override = false, $versioned = true) {
-        return '/modules/' . $module . '/asset/' . $file . ($versioned ? '?v=0.1.0' : '');
+    // Omeka versions module assets by the module version.
+    $moduleVersion = $GLOBALS['moduleVersion'];
+    $helpers->setService('assetUrl', function ($file, $module = null, $override = false, $versioned = true) use ($moduleVersion) {
+        return '/modules/' . $module . '/asset/' . $file . ($versioned ? '?v=' . $moduleVersion : '');
     });
     if ($iiifServer) {
         $helpers->setService('iiifUrl', function ($resource) {
@@ -392,7 +395,7 @@ $v->check('the default views are passed in order', ['text', 'thumbnails', 'toc',
 $head = html_entity_decode((string) $view->headScript(), ENT_QUOTES | ENT_HTML5);
 $v->check('TIFY is loaded as an ES module', (bool) preg_match('~<script type="module" src="/modules/Tify/asset/vendor/tify/tify.js\?v=[0-9a-f]{8}"~', $head), trim($head));
 $v->check('the starter script follows it', strpos($head, 'vendor/tify/tify.js') < strpos($head, 'asset/js/tify.js'));
-$v->check('assets are versioned by their file, not by the module version', false === strpos($head . (string) $view->headLink(), '?v=0.1.0'));
+$v->check('assets are versioned by their file, not by the module version', false === strpos($head . (string) $view->headLink(), '?v=' . $moduleVersion));
 $v->check('the stylesheets are added', 2 === substr_count((string) $view->headLink(), 'stylesheet'));
 
 $siteSettings->set('tify_height', '75vh');
